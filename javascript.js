@@ -1,17 +1,6 @@
+for (let i = 0; i < 5; i++) {
 
-function getComputerChoice() {
-    let randomNumber = (Math.floor(Math.random() * 3));
-    if (randomNumber == 0) {
-        return ('ROCK');
-    } else if (randomNumber == 1) {
-        return ('PAPER');
-    } else {
-        return ('SCISSORS');
-    }
-}
 
-const playerSelection = prompt('Enter rock or scissors or paper').toUpperCase();
-const computerSelection = getComputerChoice();
 
 function playRound(playerSelection, computerSelection) {
     if (playerSelection === 'ROCK' && computerSelection === 'PAPER') {
@@ -30,6 +19,28 @@ function playRound(playerSelection, computerSelection) {
         return (`No one won. Your choice - ${playerSelection}, computer choice - ${computerSelection}`);
     }
 };
+function getComputerChoice() {
+    let randomNumber = (Math.floor(Math.random() * 3));
+    if (randomNumber == 0) {
+        return ('ROCK');
+    } else if (randomNumber == 1) {
+        return ('PAPER');
+    } else {
+        return ('SCISSORS');
+    }
+};
+
+const playerSelection = prompt('Enter rock or scissors or paper').toUpperCase();
+const computerSelection = getComputerChoice();
+
+function game() {
+  console.log(playRound(playerSelection, computerSelection))
+};
+game();
+}
+
+
+
 
 
 
