@@ -68,7 +68,7 @@ function display_score(round_result) {
       finish.textContent = 'You Win!';
       buttons.forEach(el => el.disabled = true)
       start.textContent = 'If you want to play again, press start'
-      but()
+      _start()
     }
   } else if ( round_result === 'You Lose! Paper beats Rock' || round_result === 'You Lose! Scissors beats Paper' || round_result === 'You Lose! Rock beats Scissors') {
     comp_score++
@@ -77,12 +77,12 @@ function display_score(round_result) {
       finish.textContent = 'Computer Win!';
       buttons.forEach(el => el.disabled = true)
       start.textContent = 'If you want to play again, press start'
-      but()
+      _start()
     }
   }
 }
 
-function but(){
+function _start(){
   button.style.visibility = "visible";
 }
 
