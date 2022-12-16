@@ -1,0 +1,40 @@
+.container {
+    width: 600px; margin: 0 auto;
+   
+}
+
+button {
+    min-width: 150px;
+    font-family: inherit;
+    appearance: none;
+    border: 0;
+    border-radius: 5px;
+    background: #4676d7;
+    color: #fff;
+    padding: 8px 16px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.container div {
+    display: flex;
+    justify-content: space-between;
+}
+
+h2 {
+    text-align: center;
+    color: blue;
+}
+
+p {
+    color: red;
+    margin: 10% auto;
+    font-size: larger;
+}
+
+.score {
+    display: flex;
+    color: blue;
+    font-size: 40px;
+   
+}

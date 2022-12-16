@@ -1,10 +1,9 @@
 const rock = document.querySelector('#btn1');
 const paper = document.querySelector('#btn2');
 const scissors = document.querySelector('#btn3');
-const para = document.querySelector('p');
+const round_result = document.querySelector('p');
 const user = document.querySelector('#user');
 const comp = document.querySelector('#comp');
-const winner = document.querySelector('#winner');
 const finish = document.querySelector('#finish');
 const buttons = document.querySelectorAll('.btn');
 const start = document.querySelector ('#start')
@@ -15,22 +14,22 @@ let comp_score = 0;
 rock.addEventListener('click', () => {
   const computerSelection = getComputerChoice();
   const score = (playRound("ROCK", computerSelection));
-  para.textContent = score
-  display_score(para.textContent) 
+  round_result.textContent = score
+  display_score(round_result.textContent) 
 });
 
 paper.addEventListener('click', () => {
   const computerSelection = getComputerChoice();
   const score = (playRound("PAPER", computerSelection));
-  para.textContent = score
-  display_score(para.textContent) 
+  round_result.textContent = score
+  display_score(round_result.textContent) 
 });
 
 scissors.addEventListener('click', () => {
   const computerSelection = getComputerChoice();
   const score = (playRound("SCISSORS", computerSelection));
-  para.textContent = score
-  display_score(para.textContent) 
+  round_result.textContent = score
+  display_score(round_result.textContent) 
 });
 
 function playRound(playerSelection, computerSelection) {
@@ -56,13 +55,13 @@ function getComputerChoice() {
       return ('ROCK');
     } else if (randomNumber == 1) {
         return ('PAPER');
-    } else {
+    } else {s
       return ('SCISSORS');
     }
 };
 
-function display_score(para) {
-  if(para === 'You Win! Rock beats Scissors' || para ===  'You Win! Paper beats Rock' || para === 'You Win! Scissors beats Paper'){
+function display_score(round_result) {
+  if(round_result === 'You Win! Rock beats Scissors' || round_result ===  'You Win! Paper beats Rock' || round_result === 'You Win! Scissors beats Paper'){
     user_score++;
     user.textContent = user_score
     if(user_score === 5) {
@@ -71,7 +70,7 @@ function display_score(para) {
       start.textContent = 'If you want to play again, press start'
       but()
     }
-  } else if ( para === 'You Lose! Paper beats Rock' || para === 'You Lose! Scissors beats Paper' || para === 'You Lose! Rock beats Scissors') {
+  } else if ( round_result === 'You Lose! Paper beats Rock' || round_result === 'You Lose! Scissors beats Paper' || round_result === 'You Lose! Rock beats Scissors') {
     comp_score++
     comp.textContent = comp_score
     if(comp_score === 5) {
